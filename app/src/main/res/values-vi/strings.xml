@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">kiendatn2</string>
+    <string name="default_notification_channel_id">thong_bao_chung</string>
+    <string name="default_notification_channel_name">Thông báo Chung</string>
+
+    <!-- Auth strings -->
+    <string name="login_page">Trang đăng nhập</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="dont_have_account">Chưa có tài khoản? Đăng ký</string>
+    <string name="signup_page">Trang đăng ký</string>
+    <string name="display_name">Tên hiển thị</string>
+    <string name="create_account">Tạo tài khoản</string>
+    <string name="already_have_account">Đã có tài khoản? Đăng nhập!</string>
+
+    <!-- Drawer strings -->
+    <string name="menu">Menu</string>
+    <string name="sign_out">Đăng xuất</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="settings">Cài đặt</string>
+
+    <!-- Friends screen strings -->
+    <string name="search_users">Tìm kiếm người dùng</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="clear_search">Xóa tìm kiếm</string>
+    <string name="no_users_found">Không tìm thấy người dùng</string>
+    <string name="type_to_search">Nhập ít nhất 2 ký tự để tìm kiếm</string>
+    <string name="no_friends">Bạn chưa có bạn bè nào</string>
+    <string name="retry">Thử lại</string>
+    <string name="no_pending_requests">Không có yêu cầu kết bạn nào đang chờ</string>
+    <string name="no_sent_requests">Không có yêu cầu kết bạn nào đã gửi</string>
+    <string name="remove_friend">Xóa bạn</string>
+    <string name="remove_friend_confirmation">Bạn có chắc chắn muốn xóa %1$s khỏi danh sách bạn bè?</string>
+    <string name="remove">Xóa</string>
+    <string name="cancel">Hủy</string>
+    <string name="cancel_request">Hủy yêu cầu</string>
+    <string name="sent_friend_request">Đã gửi yêu cầu kết bạn</string>
+    <string name="accept">Chấp nhận</string>
+    <string name="decline">Từ chối</string>
+    <string name="request_pending">Yêu cầu đang chờ</string>
+    <string name="add_friend">Thêm bạn</string>
+    <string name="request_sent">Yêu cầu đã gửi</string>
+    <string name="tab_friends">Bạn bè</string>
+    <string name="tab_requests">Yêu cầu</string>
+    <string name="tab_sent">Đã gửi</string>
+    <string name="error_prefix">Lỗi: %1$s</string>
+    <string name="no_posts_found">Không tìm thấy bài đăng</string>
+
+    <!-- Profile screen strings -->
+    <string name="my_profile">Hồ sơ của tôi</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="my_posts">Bài đăng của tôi</string>
+    <string name="user_no_posts_yet">Người dùng này chưa đăng bài nào</string>
+    <string name="no_posts_yet">Bạn chưa đăng bài nào.</string>
+    <string name="viewing_profile">Bạn đang xem hồ sơ của %1$s</string>
+    <string name="posts">Bài đăng</string>
+    <string name="followers">Người theo dõi</string>
+    <string name="following">Đang theo dõi</string>
+    <string name="friends">Bạn bè</string>
+    <string name="edit_profile">Chỉnh sửa hồ sơ</string>
+    <string name="change_profile_picture">Thay đổi ảnh đại diện</string>
+    <string name="change_display_name">Thay đổi tên hiển thị</string>
+    <string name="save">Lưu</string>
+    <string name="edit_post">Chỉnh sửa bài đăng</string>
+
+    <!-- Search screen strings -->
+    <string name="recent_searches">Tìm kiếm gần đây</string>
+    <string name="clear_search_history">Xóa lịch sử tìm kiếm</string>
+    <string name="remove_from_history">Xóa khỏi lịch sử</string>
+
+    <!-- Comment screen strings -->
+    <string name="post_details">Chi tiết bài đăng</string>
+    <string name="comments">Bình luận</string>
+    <string name="no_comments_yet">Chưa có bình luận. Hãy là người đầu tiên bình luận!</string>
+    <string name="error_loading_comments">Lỗi khi tải bình luận: %1$s</string>
+    <string name="loading_comments">Đang tải bình luận...</string>
+    <string name="replying_to">Trả lời %1$s</string>
+    <string name="replying_to_reply">Trả lời bình luận của %1$s</string>
+    <string name="cancel_reply">Hủy trả lời</string>
+    <string name="selected_image">Hình ảnh đã chọn</string>
+    <string name="remove_image">Xóa hình ảnh</string>
+    <string name="uploading">Đang tải lên...</string>
+    <string name="write_a_reply">Viết trả lời…</string>
+    <string name="write_a_nested_reply">Viết trả lời lồng…</string>
+    <string name="add_a_comment">Thêm bình luận...</string>
+    <string name="attach_media">Đính kèm phương tiện</string>
+    <string name="send_reply">Gửi trả lời</string>
+    <string name="send_comment">Gửi bình luận</string>
+    <string name="error">Lỗi: %1$s</string>
+    <string name="no_post_selected">Chưa chọn bài đăng</string>
+    <string name="share_post">Chia sẻ bài đăng</string>
+    <string name="share">Chia sẻ</string>
+
+    <!-- Post screen strings -->
+    <string name="loading_posts">Đang tải bài đăng...</string>
+    <string name="no_posts">Chưa có bài đăng. Hãy là người đầu tiên đăng!</string>
+    <string name="post">Đăng</string>
+    <string name="ok">OK</string>
+    <string name="create_post">Tạo bài đăng</string>
+    <string name="whats_on_your_mind">Bạn đang nghĩ gì?</string>
+    <string name="error_dialog_title">Lỗi</string>
+    <string name="tab_for_you">Dành cho bạn</string>
+    <string name="tab_friends_posts">Bạn bè</string>
+    <string name="post_visibility_label">Chế độ hiển thị:</string>
+    <string name="post_visibility_public">Công khai</string>
+    <string name="post_visibility_friends">Chỉ bạn bè</string>
+    <string name="post_visibility_private">Chỉ mình tôi</string>
+
+    <!-- Notification screen strings -->
+    <string name="no_notifications">Chưa có thông báo</string>
+    <string name="shared_post">%s đã chia sẻ một bài đăng</string>
+    <string name="profile_picture">Ảnh đại diện</string>
+    <string name="profile_image_placeholder">Hình ảnh đại diện placeholder</string>
+    <string name="liked_your_post">đã thích bài đăng của bạn</string>
+    <string name="commented_on_your_post">đã bình luận bài đăng của bạn</string>
+    <string name="replied_to_your_comment">đã trả lời bình luận của bạn</string>
+    <string name="sent_you_a_friend_request">đã gửi yêu cầu kết bạn</string>
+    <string name="accepted_your_friend_request">đã chấp nhận yêu cầu kết bạn của bạn</string>
+    <string name="badge_more_than_nine">9+</string>
+    <string name="new_notification">Bạn có thông báo mới</string>
+    <string name="reply">Trả lời</string>
+    <string name="mark_all_as_read">Đánh dấu tất cả đã đọc</string>
+    <string name="filter">Lọc</string>
+    <string name="recent">Gần đây (5 ngày)</string>
+    <string name="all">Tất cả thông báo</string>
+    <string name="last_week">Tuần trước</string>
+    <string name="last_month">Tháng trước</string>
+
+    <!-- Settings strings -->
+    <string name="choose_language">Chọn ngôn ngữ</string>
+    <string name="change_password">Thay đổi mật khẩu</string>
+    <string name="password_change_success">Đã thay đổi mật khẩu thành công!</string>
+    <string name="current_password">Mật khẩu hiện tại</string>
+    <string name="confirm_password">Xác nhận mật khẩu mới</string>
+    <string name="password_error_all_fields">Tất cả các trường đều bắt buộc</string>
+    <string name="password_error_at_least_6_characters">Mật khẩu phải có ít nhất 6 ký tự</string>
+    <string name="password_error_dont_match">Mật khẩu không khớp</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_profile">Hồ sơ</string>
+    <string name="cd_settings">Cài đặt</string>
+    <string name="cd_back">Quay lại</string>
+    <string name="cd_refresh">Làm mới</string>
+    <string name="cd_edit_profile">Chỉnh sửa hồ sơ</string>
+    <string name="cd_retry">Thử lại</string>
+    <string name="cd_notifications">Thông báo</string>
+    <string name="cd_reload">Tải lại</string>
+    <string name="cd_reply_image">Hình ảnh trả lời</string>
+    <string name="cd_like">Thích</string>
+    <string name="cd_reply">Trả lời</string>
+    <string name="cd_comment_image">Hình ảnh bình luận</string>
+    <string name="cd_comment_icon">Biểu tượng bình luận</string>
+    <string name="cd_app_logo">Logo ứng dụng</string>
+    <string name="cd_home">Trang chủ</string>
+    <string name="cd_friends">Bạn bè</string>
+    <string name="cd_cancel_create">Hủy tạo</string>
+    <string name="cd_create">Tạo</string>
+    <string name="cd_selected_image">Hình ảnh đã chọn</string>
+    <string name="cd_remove_media">Xóa phương tiện</string>
+    <string name="cd_add_photo">Thêm ảnh</string>
+    <string name="cd_post_image">Hình ảnh bài đăng</string>
+    <string name="cd_like_icon">Biểu tượng thích</string>
+    <string name="cd_share_icon">Biểu tượng chia sẻ</string>
+    <string name="language_content_description">Ngôn ngữ</string>
+    <string name="settings_content_description">Cài đặt</string>
+
+    <!-- Media Picker -->
+    <string name="select_image">Chọn hình ảnh</string>
+    <string name="select_media">Chọn phương tiện</string>
+    <string name="no_images_found">Không tìm thấy hình ảnh</string>
+    <string name="no_media_found">Không tìm thấy tệp phương tiện</string>
+
+    <string name="notifications">Thông báo</string>
+
+    <string name="permission_required">Cần quyền truy cập phương tiện</string>
+    <string name="grant_permission">Cấp quyền</string>
+    <string name="back">Quay lại</string>
+    <string name="hidden_posts">Bài đăng đã ẩn</string>
+    <string name="archived_posts">Bài đăng đã lưu trữ</string>
+    <string name="no_hidden_posts">Không tìm thấy bài đăng đã ẩn</string>
+    <string name="no_archived_posts">Không tìm thấy bài đăng đã lưu trữ</string>
+    <string name="delete_post">Xóa bài đăng</string>
+    <string name="unhide_post">Bỏ ẩn bài đăng</string>
+    <string name="hide_post">Ẩn bài đăng</string>
+    <string name="archive_post">Lưu trữ bài đăng</string>
+    <string name="unarchive_post">Bỏ lưu trữ bài đăng</string>
+    <string name="repost_only_me">Đăng lại (Chỉ mình tôi)</string>
+    <string name="share_for_friends">Chia sẻ (Cho bạn bè)</string>
+    <string name="my_posts_and_shares">Bài đăng và chia sẻ của tôi</string>
+</resources>

@@ -1,0 +1,199 @@
+<resources>
+    <string name="app_name">kiendatn2</string>
+    <string name="default_notification_channel_id">notificaciones_generales</string>
+    <string name="default_notification_channel_name">Notificaciones Generales</string>
+
+    <!-- Auth strings -->
+    <string name="login_page">Página de inicio de sesión</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="dont_have_account">¿No tienes cuenta? Regístrate</string>
+    <string name="signup_page">Página de registro</string>
+    <string name="display_name">Nombre de usuario</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="already_have_account">¿Ya tienes cuenta? ¡Inicia sesión!</string>
+
+    <!-- Drawer strings -->
+    <string name="menu">Menú</string>
+    <string name="sign_out">Cerrar sesión</string>
+    <string name="language">Idioma</string>
+    <string name="settings">Configuración</string>
+
+    <!-- Friends screen strings -->
+    <string name="search_users">Buscar usuarios</string>
+    <string name="search">Buscar</string>
+    <string name="clear_search">Borrar búsqueda</string>
+    <string name="no_users_found">No se encontraron usuarios</string>
+    <string name="type_to_search">Escribe al menos 2 caracteres para buscar</string>
+    <string name="no_friends">Aún no tienes amigos</string>
+    <string name="retry">Reintentar</string>
+    <string name="no_pending_requests">No hay solicitudes de amistad pendientes</string>
+    <string name="no_sent_requests">No hay solicitudes de amistad enviadas</string>
+    <string name="remove_friend">Eliminar amigo</string>
+    <string name="remove_friend_confirmation">¿Estás seguro de que quieres eliminar a %1$s de tus amigos?</string>
+    <string name="remove">Eliminar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="sent_friend_request">Te envió una solicitud de amistad</string>
+    <string name="accept">Aceptar</string>
+    <string name="decline">Rechazar</string>
+    <string name="request_pending">Solicitud pendiente</string>
+    <string name="add_friend">Agregar amigo</string>
+    <string name="request_sent">Solicitud enviada</string>
+    <string name="tab_friends">Amigos</string>
+    <string name="tab_requests">Solicitudes</string>
+    <string name="tab_sent">Enviadas</string>
+    <string name="error_prefix">Error: %1$s</string>
+    <string name="no_posts_found">No se encontraron publicaciones</string>
+    <string name="cancel_request">Cancelar solicitud</string>
+
+    <!-- Profile screen strings -->
+    <string name="my_profile">Mi perfil</string>
+    <string name="profile">Perfil</string>
+    <string name="my_posts">Mis publicaciones</string>
+    <string name="no_posts_yet">Aún no has publicado nada.</string>
+    <string name="viewing_profile">Estás viendo el perfil de %1$s</string>
+    <string name="posts">Publicaciones</string>
+    <string name="followers">Seguidores</string>
+    <string name="following">Siguiendo</string>
+    <string name="friends">Amigos</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="change_profile_picture">Cambiar foto de perfil</string>
+    <string name="change_display_name">Cambiar nombre de usuario</string>
+    <string name="save">Guardar</string>
+    <string name="user_no_posts_yet">Este usuario aún no ha publicado nada</string>
+
+    <!-- Search screen strings -->
+    <string name="recent_searches">Búsquedas recientes</string>
+    <string name="clear_search_history">Borrar historial de búsqueda</string>
+    <string name="remove_from_history">Eliminar del historial</string>
+
+    <!-- Comment screen strings -->
+    <string name="post_details">Detalles de la publicación</string>
+    <string name="comments">Comentarios</string>
+    <string name="no_comments_yet">Aún no hay comentarios. ¡Sé el primero en comentar!</string>
+    <string name="error_loading_comments">Error al cargar comentarios: %1$s</string>
+    <string name="loading_comments">Cargando comentarios...</string>
+    <string name="replying_to">Respondiendo a %1$s</string>
+    <string name="replying_to_reply">Respondiendo al comentario de %1$s</string>
+    <string name="cancel_reply">Cancelar respuesta</string>
+    <string name="selected_image">Imagen seleccionada</string>
+    <string name="remove_image">Eliminar imagen</string>
+    <string name="uploading">Subiendo...</string>
+    <string name="write_a_reply">Escribe una respuesta…</string>
+    <string name="write_a_nested_reply">Escribe una respuesta anidada…</string>
+    <string name="add_a_comment">Agregar un comentario...</string>
+    <string name="attach_media">Adjuntar multimedia</string>
+    <string name="send_reply">Enviar respuesta</string>
+    <string name="send_comment">Enviar comentario</string>
+    <string name="error">Error: %1$s</string>
+    <string name="no_post_selected">No se seleccionó ninguna publicación</string>
+
+    <!-- Post screen strings -->
+    <string name="loading_posts">Cargando publicaciones...</string>
+    <string name="no_posts">Aún no hay publicaciones. ¡Sé el primero en publicar!</string>
+    <string name="post">Publicar</string>
+    <string name="ok">OK</string>
+    <string name="create_post">Crear publicación</string>
+    <string name="whats_on_your_mind">¿Qué tienes en mente?</string>
+    <string name="error_dialog_title">Error</string>
+    <string name="tab_for_you">Para ti</string>
+    <string name="tab_friends_posts">Amigos</string>
+    <string name="share_post">Compartir publicación</string>
+    <string name="edit_post">Editar publicación</string>
+    <string name="delete_post">Eliminar publicación</string>
+    <string name="hide_post">Ocultar publicación</string>
+    <string name="unhide_post">Mostrar publicación</string>
+    <string name="archive_post">Archivar publicación</string>
+    <string name="unarchive_post">Desarchivar publicación</string>
+    <string name="repost_only_me">Republicar (Solo yo)</string>
+    <string name="share_for_friends">Compartir (Para amigos)</string>
+    <string name="my_posts_and_shares">Mis publicaciones y compartidas</string>
+
+    <!-- Notification screen strings -->
+    <string name="no_notifications">Aún no hay notificaciones</string>
+    <string name="shared_post">%s compartió una publicación</string>
+    <string name="profile_picture">Foto de perfil</string>
+    <string name="profile_image_placeholder">Marcador de imagen de perfil</string>
+    <string name="liked_your_post">dio me gusta a tu publicación</string>
+    <string name="commented_on_your_post">comentó en tu publicación</string>
+    <string name="replied_to_your_comment">respondió a tu comentario</string>
+    <string name="sent_you_a_friend_request">te envió una solicitud de amistad</string>
+    <string name="accepted_your_friend_request">aceptó tu solicitud de amistad</string>
+    <string name="badge_more_than_nine">9+</string>
+    <string name="new_notification">Tienes una nueva notificación</string>
+    <string name="reply">Responder</string>
+    <string name="mark_all_as_read">Marcar todo como leído</string>
+    <string name="filter">Filtro</string>
+    <string name="recent">Recientes (5 días)</string>
+    <string name="all">Todas las notificaciones</string>
+    <string name="last_week">Última semana</string>
+    <string name="last_month">Último mes</string>
+
+    <!-- Settings strings -->
+    <string name="choose_language">Elegir idioma</string>
+    <string name="change_password">Cambiar contraseña</string>
+    <string name="password_change_success">¡Contraseña cambiada exitosamente!</string>
+    <string name="current_password">Contraseña actual</string>
+    <string name="confirm_password">Confirmar nueva contraseña</string>
+    <string name="password_error_all_fields">Todos los campos son obligatorios</string>
+    <string name="password_error_at_least_6_characters">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="password_error_dont_match">Las contraseñas no coinciden</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_profile">Perfil</string>
+    <string name="cd_settings">Configuración</string>
+    <string name="cd_back">Volver</string>
+    <string name="cd_refresh">Actualizar</string>
+    <string name="cd_edit_profile">Editar perfil</string>
+    <string name="cd_retry">Reintentar</string>
+    <string name="cd_notifications">Notificaciones</string>
+    <string name="cd_reload">Recargar</string>
+    <string name="cd_reply_image">Imagen de respuesta</string>
+    <string name="cd_like">Me gusta</string>
+    <string name="cd_reply">Responder</string>
+    <string name="cd_comment_image">Imagen de comentario</string>
+    <string name="cd_comment_icon">Ícono de comentario</string>
+    <string name="cd_app_logo">Logotipo de la aplicación</string>
+    <string name="cd_home">Inicio</string>
+    <string name="cd_friends">Amigos</string>
+    <string name="cd_cancel_create">Cancelar creación</string>
+    <string name="cd_create">Crear</string>
+    <string name="cd_selected_image">Imagen seleccionada</string>
+    <string name="cd_remove_media">Eliminar multimedia</string>
+    <string name="cd_add_photo">Agregar foto</string>
+    <string name="cd_post_image">Imagen de publicación</string>
+    <string name="cd_like_icon">Ícono de me gusta</string>
+    <string name="cd_share_icon">Ícono de compartir</string>
+    <string name="language_content_description">Idioma</string>
+    <string name="settings_content_description">Configuración</string>
+
+    <!-- Media Picker -->
+    <string name="select_image">Seleccionar imagen</string>
+    <string name="select_media">Seleccionar multimedia</string>
+    <string name="no_images_found">No se encontraron imágenes</string>
+    <string name="no_media_found">No se encontraron archivos multimedia</string>
+
+    <!-- Post visibility -->
+    <string name="post_visibility_label">Visibilidad:</string>
+    <string name="post_visibility_public">Público</string>
+    <string name="post_visibility_friends">Solo amigos</string>
+    <string name="post_visibility_private">Solo yo</string>
+
+    <!-- Permissions -->
+    <string name="permission_required">Se requiere permiso para acceder a multimedia</string>
+    <string name="grant_permission">Otorgar permiso</string>
+
+    <!-- Navigation -->
+    <string name="back">Volver</string>
+
+    <!-- Post management -->
+    <string name="hidden_posts">Publicaciones ocultas</string>
+    <string name="archived_posts">Publicaciones archivadas</string>
+    <string name="no_hidden_posts">No se encontraron publicaciones ocultas</string>
+    <string name="no_archived_posts">No se encontraron publicaciones archivadas</string>
+
+    <string name="notifications">Notificaciones</string>
+
+    <string name="share">Compartir</string>
+</resources>
