@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kiendatn2"
+        android:theme="@style/Theme.nam"
         tools:targetApi="31"
         tools:replace="android:allowBackup">
         
@@ -33,7 +33,7 @@
             android:name=".ui.main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Kiendatn2">
+            android:theme="@style/Theme.nam">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

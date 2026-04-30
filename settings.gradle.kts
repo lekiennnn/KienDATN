@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kiendatn2"
+rootProject.name = "nam"
 include(":app")
  

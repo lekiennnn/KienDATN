@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">kiendatn2</string>
+    <string name="app_name">nam</string>
     <string name="default_notification_channel_id">general_notifications</string>
     <string name="default_notification_channel_name">General Notifications</string>
 

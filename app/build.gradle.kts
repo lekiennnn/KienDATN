@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.kiendatn2"
+    namespace = "com.example.nam"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.kiendatn2"
+        applicationId = "com.example.nam"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
