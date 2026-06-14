@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
+import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
@@ -21,6 +22,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -29,7 +34,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -42,10 +46,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -73,7 +73,6 @@ import com.example.nam.ui.post.PostItem
 import com.example.nam.ui.post.PostViewModel
 import com.example.nam.ui.theme.LocalCustomColors
 import kotlinx.coroutines.launch
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -180,6 +179,7 @@ fun ProfileScreen(
                 val imageUrl = (uiState.imageUploadState as ImageUploadState.Success).imageUrl
                 profileViewModel.updateUserWithCloudinaryUrl(imageUrl)
             }
+
             is ImageUploadState.Error -> {
                 val errorMsg = (uiState.imageUploadState as ImageUploadState.Error).message
                 coroutineScope.launch {
@@ -187,6 +187,7 @@ fun ProfileScreen(
                 }
                 setIsUpdatingImage(false)
             }
+
             else -> {}
         }
     }
@@ -231,7 +232,7 @@ fun ProfileScreen(
                         } else if (userId.isNotEmpty()) {
                             profileViewModel.loadUserProfile(userId)
                         } else {
-                            profileViewModel.loadUserProfile() // Fallback to own profile if userId is empty
+                            profileViewModel.loadUserProfile()
                         }
                     }) {
                         Icon(
@@ -266,6 +267,7 @@ fun ProfileScreen(
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
+
                 is ProfileState.Success -> {
                     val user = uiState.profileState.user
                     val postCount = uiState.userPostsState.let {
@@ -320,6 +322,7 @@ fun ProfileScreen(
 
                         when (uiState.userPostsState) {
                             is UserPostsState.Loading -> {
+                                Log.d("DCM", "ProfileScreen: LOADING")
                                 item {
                                     Box(
                                         modifier = Modifier
@@ -331,9 +334,13 @@ fun ProfileScreen(
                                     }
                                 }
                             }
+
                             is UserPostsState.Success -> {
+                                Log.d("DCM", "ProfileScreen: SUCCESS")
                                 val posts = uiState.userPostsState.posts
+                                Log.d("DCM", "ProfileScreen: ${posts.size}")
                                 if (posts.isEmpty()) {
+                                    Log.d("DCM", "ProfileScreen ")
                                     item {
                                         Box(
                                             modifier = Modifier
@@ -342,15 +349,15 @@ fun ProfileScreen(
                                             contentAlignment = Alignment.Center
                                         ) {
                                             Text(
-                                                text = if (isOwnProfile) stringResource(R.string.no_posts_yet) else stringResource(
-                                                    R.string.user_no_posts_yet
-                                                ),
+                                                text = if (isOwnProfile) stringResource(R.string.no_posts_yet)
+                                                else stringResource(R.string.user_no_posts_yet),
                                                 color = LocalCustomColors.current.textPrimary
                                             )
                                         }
                                     }
                                 } else {
                                     items(posts) { post ->
+                                        Log.d("DCM", "ProfileScreen: ${post.text}")
                                         PostItem(
                                             post = post,
                                             postViewModel = postViewModel,
@@ -364,7 +371,9 @@ fun ProfileScreen(
                                     }
                                 }
                             }
+
                             is UserPostsState.Error -> {
+                                Log.d("DCM", "ProfileScreen: ERROR")
                                 item {
                                     Text(
                                         text = "Error: ${uiState.userPostsState.message}",
@@ -373,6 +382,7 @@ fun ProfileScreen(
                                     )
                                 }
                             }
+
                             null -> {
                                 item {
                                     CircularProgressIndicator(
@@ -385,6 +395,7 @@ fun ProfileScreen(
                         }
                     }
                 }
+
                 is ProfileState.Error -> {
                     Column(
                         modifier = Modifier
@@ -407,6 +418,7 @@ fun ProfileScreen(
                         }
                     }
                 }
+
                 null -> {
                     CircularProgressIndicator(
                         modifier = Modifier.align(Alignment.Center)

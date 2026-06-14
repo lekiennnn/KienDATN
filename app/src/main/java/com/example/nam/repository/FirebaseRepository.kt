@@ -310,7 +310,10 @@ class FirebaseRepository {
                 .whereEqualTo("userId", userId)
                 .orderBy("createdAt", Query.Direction.DESCENDING)
 
-            val snapshot = postsQuery.get().await()
+            val snapshot = firestore.collection("posts")
+                .whereEqualTo("userId", userId)
+                .get()
+                .await()
             Log.d("FirebaseRepository", "Found ${snapshot.size()} posts")
 
             val posts = snapshot.toObjects(Post::class.java)
@@ -320,6 +323,10 @@ class FirebaseRepository {
             posts.forEach { post ->
                 Log.d("FirebaseRepository", "Post ${post.id}: visibility=${post.visibility}")
             }
+
+
+
+            Log.d("DCM", "Documents found = ${snapshot.documents.size}")
 
             if (currentUser != null) {
                 val userLikes = likesCollection
