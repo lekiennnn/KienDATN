@@ -103,7 +103,6 @@ fun PostItemDetailed(
                 .fillMaxWidth()
                 .padding(horizontal = 8.dp)
         ) {
-            // Post shared information
             if (isSharedPost) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -128,12 +127,10 @@ fun PostItemDetailed(
 
             }
             
-            // Author info row
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 8.dp)
             ) {
-                // Profile picture
                 Box(
                     modifier = Modifier
                         .size(40.dp)
@@ -147,19 +144,18 @@ fun PostItemDetailed(
                             }
                         }
                 ) {
-                    if (profilePictureUrl != null) {
+                    if (profilePictureUrl.isNullOrEmpty()) {
+                        Icon(
+                            imageVector = Icons.Default.Person,
+                            contentDescription = null,
+                            modifier = Modifier.align(Alignment.Center)
+                        )
+                    } else {
                         AsyncImage(
                             model = profilePictureUrl,
                             contentDescription = "Profile picture",
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxWidth()
-                        )
-                    } else {
-                        // User initial as placeholder - use first letter of display name
-                        Icon(
-                            imageVector = Icons.Default.Person,
-                            contentDescription = null,
-                            modifier = Modifier.align(Alignment.Center)
                         )
                     }
                 }

@@ -682,24 +682,9 @@ class PostViewModel : ViewModel() {
                             (post.shareCount - 1).coerceAtLeast(0)
                         }
 
-                        Log.d(
-                            "PostViewModel",
-                            "Updating post $postId share state: isShared=$wasShared, newCount=$newShareCount"
-                        )
-
-                        Log.d(
-                            "PostViewModel",
-                            "Post before update - isSharedByCurrentUser: ${post.isSharedByCurrentUser}"
-                        )
-
                         val updatedPost = post.copy(
                             shareCount = newShareCount,
                             isSharedByCurrentUser = wasShared
-                        )
-
-                        Log.d(
-                            "PostViewModel",
-                            "Post after update - isSharedByCurrentUser: ${updatedPost.isSharedByCurrentUser}"
                         )
 
                         updatedPost
@@ -838,36 +823,9 @@ class PostViewModel : ViewModel() {
         }
     }
 
-    /**
-     * Archives a post without removing it from the main feed.
-     * The post will be added to the archived posts collection and also shown in the archive screen.
-     */
-    fun archivePost(postId: String) {
-        viewModelScope.launch {
-            try {
-                val success = repository.archivePost(postId)
-                if (success) {
-                    Log.d("PostViewModel", "Successfully archived post: $postId")
-
-                    // Load archived posts to include this post in the archives screen
-                    loadArchivedPosts()
-                } else {
-                    Log.e("PostViewModel", "Failed to archive post: $postId")
-                }
-            } catch (e: Exception) {
-                Log.e("PostViewModel", "Error archiving post", e)
-            }
-        }
-    }
-
     fun unarchivePost(postId: String) {
         viewModelScope.launch {
             try {
-                val success = repository.unarchivePost(postId)
-                if (success) {
-                    Log.d("PostViewModel", "Successfully unarchived post: $postId")
-
-                    // Remove the post from archived posts state
                     _uiState.update { currentState ->
                         val updatedArchivedPostsState =
                             when (val archivedPostsState = currentState.archivedPostsState) {
@@ -882,37 +840,18 @@ class PostViewModel : ViewModel() {
 
                         currentState.copy(archivedPostsState = updatedArchivedPostsState)
                     }
-
-                    // Refresh the main posts list to include the unarchived post
                     loadPosts()
-                } else {
-                    Log.e("PostViewModel", "Failed to unarchive post: $postId")
-                }
             } catch (e: Exception) {
                 Log.e("PostViewModel", "Error unarchiving post", e)
             }
         }
     }
 
-    fun debugFriendships() {
-        viewModelScope.launch {
-            try {
-                repository.debugFriendships()
-            } catch (e: Exception) {
-                Log.e("PostViewModel", "Error debugging friendships", e)
-            }
-        }
-    }
-
-    // Delete a post - only the post owner can delete their post
     fun deletePost(postId: String) {
         viewModelScope.launch {
             try {
                 val success = repository.deletePost(postId)
                 if (success) {
-                    Log.d("PostViewModel", "Successfully deleted post: $postId")
-
-                    // Remove the post from all states
                     _uiState.update { currentState ->
                         // Remove from posts state
                         val updatedPostsState = when (val postsState = currentState.postsState) {
@@ -924,7 +863,6 @@ class PostViewModel : ViewModel() {
                             else -> currentState.postsState
                         }
 
-                        // Remove from friends posts state
                         val updatedFriendsPostsState =
                             when (val friendsPostsState = currentState.friendsPostsState) {
                                 is PostState.Success -> {
@@ -936,7 +874,6 @@ class PostViewModel : ViewModel() {
                                 else -> currentState.friendsPostsState
                             }
 
-                        // Clear current post state if it's the deleted post
                         val updatedCurrentPostState = if (
                             currentState.currentPostState is CurrentPostState.PostLoaded &&
                             (currentState.currentPostState as CurrentPostState.PostLoaded).post.id == postId
@@ -961,15 +898,11 @@ class PostViewModel : ViewModel() {
         }
     }
 
-    // Hide a post - any user can hide any post from their view
     fun hidePost(postId: String) {
         viewModelScope.launch {
             try {
                 val success = repository.hidePost(postId)
                 if (success) {
-                    Log.d("PostViewModel", "Successfully hid post: $postId")
-
-                    // Remove the post from all states (similar to delete, but only for the current user's view)
                     _uiState.update { currentState ->
                         // Remove from posts state
                         val updatedPostsState = when (val postsState = currentState.postsState) {
@@ -1024,7 +957,6 @@ class PostViewModel : ViewModel() {
             try {
                 val success = repository.unhidePost(postId)
                 if (success) {
-                    Log.d("PostViewModel", "Successfully unhid post: $postId")
 
                     // Remove the post from hidden posts state
                     _uiState.update { currentState ->
